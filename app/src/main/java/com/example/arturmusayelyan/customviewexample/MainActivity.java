@@ -1,8 +1,9 @@
 package com.example.arturmusayelyan.customviewexample;
 
+import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -12,7 +13,6 @@ import android.widget.Toast;
 import com.example.arturmusayelyan.customviewexample.adapters.RecAdapterFirst;
 import com.example.arturmusayelyan.customviewexample.interfaces.RecycleClick;
 import com.example.arturmusayelyan.customviewexample.model.Student;
-import com.example.arturmusayelyan.customviewexample.views.ItemRow;
 import com.example.arturmusayelyan.customviewexample.views.Loader;
 
 import java.util.ArrayList;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements RecycleClick {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_main);
         init();
         initRecAdapterFirst(studentsList);
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements RecycleClick {
     private void init() {
         mainView = findViewById(R.id.main_view);
         recyclerView = findViewById(R.id.recycler_view);
-        ItemRow itemRow=findViewById(R.id.custom_row_example);
+        //ItemRow itemRow=findViewById(R.id.custom_row_example);
         studentsList = new ArrayList<>();
         studentsList.add(new Student("Artur", "1", "80000"));
         studentsList.add(new Student("Karen", "2", "40000"));

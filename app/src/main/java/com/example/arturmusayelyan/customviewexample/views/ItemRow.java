@@ -20,9 +20,12 @@ public class ItemRow extends RelativeLayout implements View.OnClickListener {
 
     public ItemRow(Context context) {
         super(context);
-        this.context = context;
+        this.context=context;
         init();
     }
+
+
+
 
     private void init() {
         view = inflate(context, R.layout.custom_row_item, this);

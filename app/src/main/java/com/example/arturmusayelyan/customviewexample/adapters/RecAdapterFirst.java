@@ -46,8 +46,8 @@ public class RecAdapterFirst extends RecyclerView.Adapter<RecAdapterFirst.MyView
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Student currentStudent = studentsList.get(position);
         holder.textView.setText(currentStudent.getName());
-        if(currentStudent.getName()=="Vahag"){
-            ItemRow itemRow=new ItemRow(context);
+        if (currentStudent.getName() == "Vahag") {
+            ItemRow itemRow = new ItemRow(context);
             itemRow.idSetText(currentStudent.getId());
             itemRow.salarySetText(currentStudent.getCount());
             itemRow.idSetClickListener();
