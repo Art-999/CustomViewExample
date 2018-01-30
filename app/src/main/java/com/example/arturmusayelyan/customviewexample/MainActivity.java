@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements RecycleClick {
     private void init() {
         mainView = findViewById(R.id.main_view);
         recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
         //ItemRow itemRow=findViewById(R.id.custom_row_example);
         studentsList = new ArrayList<>();
         studentsList.add(new Student("Artur", "1", "80000"));
