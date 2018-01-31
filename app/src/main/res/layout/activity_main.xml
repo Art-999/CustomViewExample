@@ -9,17 +9,20 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
+        android:layout_above="@id/custom_row_example"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
 
-    <!--<com.example.arturmusayelyan.customviewexample.views.ItemRow-->
-        <!--android:id="@+id/custom_row_example"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:layout_alignParentBottom="true" />-->
+    <com.example.arturmusayelyan.customviewexample.views.ItemRow
+
+        android:id="@+id/custom_row_example"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true" />
 
     <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/loader_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

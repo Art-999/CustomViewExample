@@ -1,6 +1,7 @@
 package com.example.arturmusayelyan.customviewexample.views;
 
 import android.content.Context;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ import com.example.arturmusayelyan.customviewexample.R;
  */
 
 public class ItemRow extends RelativeLayout implements View.OnClickListener {
+
     private Context context;
     private View view;
     private TextView idTv;
@@ -20,14 +22,17 @@ public class ItemRow extends RelativeLayout implements View.OnClickListener {
 
     public ItemRow(Context context) {
         super(context);
-        this.context=context;
-        init();
+        init(context);
+    }
+
+    public ItemRow(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context);
     }
 
 
-
-
-    private void init() {
+    private void init(Context context) {
+        this.context = context;
         view = inflate(context, R.layout.custom_row_item, this);
         idTv = view.findViewById(R.id.id_field);
         salaryTv = view.findViewById(R.id.salary_field);
@@ -49,4 +54,6 @@ public class ItemRow extends RelativeLayout implements View.OnClickListener {
     public void onClick(View v) {
         Toast.makeText(context,"id textView clicked ",Toast.LENGTH_SHORT).show();
     }
+
+
 }
